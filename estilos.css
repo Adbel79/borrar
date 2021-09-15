@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.button {
+    width: 75px;
+    height: 75px;
+    font-size: 50px;
+    margin: 2px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    background: rgb(40, 56, 80);
+    color:black;
+    border: none;
+}
+
+.textview {
+    width: 307px;
+    margin: 5px;
+    font-size: 50px;
+    padding: 5px;
+    background: black(224, 225, 228);
+    border: none;
+    font-family: 'Arial', sans-serif;
+}
+
+.button_0 {
+    width: 156px;
+}
+
+.button_equal {
+    height: 156px;
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+h1{
+    font-family: 'Century Gothic';
+    text-align: left;
+    text-align: center;
+    color: black(235, 235, 235);
+}

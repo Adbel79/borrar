@@ -23,15 +23,18 @@
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
         </div>
-        <button type="submit" class="btn btn-primary"onclick="window.alert('enviar 1')">Enviar</button>
+        <button type="submit" class="btn btn-primary" id="btnenviar1">Enviar</button>
         <a href="" class="btn btn-primary"onclick="window.alert('enviar 2')">Enviar 2</a>
 
         <!-- boton que no genera envio y no hay un querystring-->
         <a href="" class="btn btn-danger" onclick="window.alert('enviar 3')">Enviar 3</a>
         <!-- este boton no hace cambios internos solo envia a otra pagina-->
-        <a href="" class="btn btn-primary" onclick="window.alert('enviar 4')">Enviar 4</a>
+        <a href="" class="btn btn-primary" onclick="boton4()">Enviar 4</a>
+
+        <a href="" class="btn btn-primary" id="botonEnviar5">Enviar 5</a>
 
     </form>
 </div>
 </body>
+<script src="formulario2.js"></script>
 </html>
