@@ -4,29 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inicio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Login</title>
+     <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+
 </head>
 <body>
+  <h1>inicio de sesion</h1>
     <div class="container">
-        <form>
-            <div class="mb-3">
-                <h1>Hola, buen dia. Aquí puedes iniciar sesión</h1>
-                <label for="exampleInputEmail1" class="form-label">nombre de usuario</label>
-                <input type="email" class="form-control" id="nombre" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text"></div>
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="contra">
-            </div>
-            
-            <button type="submit" class="btn btn-primary" id="iniciar">Iniciar sesion</button>
-    
-            <a href="" class="btn btn-danger" id="botonEnviar5">registrarse</a>
-    
-        </form>
-    </div>
+        <form action="http://localhost:4567/hola" method="GET">
+         
+            <label for="usuario" class="form-label">Usuario: </label>
+            <input type="text" name="usu" class="form-control" id="usuario" placeholder="Escribe tu nombre de usuario" required>
+            <div id="emailHelp" class="form-text">Tu usuario y password son confidenciales.</div>
+          </div>
+         
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña: </label>
+            <input type="password" name="pass" class="form-control" id="password" minlength="5" maxlength="10" placeholder="Escribe tu nombre de usuario" required>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Recuérdame</label>
+          </div>
+          <a href="registrar.html" class="btn btn-danger">Validar-Datos-Mensaje</a> 
+          <button type="button" class="btn btn-primary" id="iniciar">Validar Datos</button> 
+      </div>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="acciones.js"></script>
 </body>
-<script src="acciones.js"></script>
 </html>
