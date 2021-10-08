@@ -18,7 +18,7 @@
         var parametros = new URLSearchParams(queryString);
     </script>
 
-    <h2>Lista de usuarios</h2>
+    <h2>agregados</h2>
     <div class="card" style="width: 18rem;">
         <div class="card-header">
             Estudiante
@@ -32,10 +32,10 @@
             </div>
             <div class="col">
                     <li class="list-group-item">
-                        <script>document.write(parametros.get('nombre'));</script>
+                        <script>document.write(parametros.get('usu'));</script>
                     </li>
                     <li class="list-group-item">
-                        <script>document.write(parametros.get('contra'));</script>
+                        <script>document.write(parametros.get('pass'));</script>
                     </li>
                 </ul>
             </div>

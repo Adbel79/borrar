@@ -22,7 +22,6 @@ BotonValidar.addEventListener("click", function () {
 
                 if(params.get("usu") == "juan"){
                     if(params.get("pass") == "123"){
-                        console.log("Si entro a los if´s");
                         window.location.replace('lista.html'); 
                     }
                 }else{
