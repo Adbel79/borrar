@@ -64,5 +64,37 @@ public class App
             return gson.toJson(dao.listadoUsuario());
         });
 
+        get("/Borrar", (req, res) ->{
+            before((req2, res2) -> res.type("application/txt"));
+            String ID = req.queryParams("txtID");
+            System.out.println(ID);
+            DAO dao = new DAO();
+            dao.BorrarUsuarios(ID);
+            return "Listo";
+        });
+
+        get("/ModificarCompleto", (req, res)->{
+            before((req2, res2) -> res.type("application/txt"));
+            String nombre = req.queryParams("Nombre");
+            String nombreValidacion = req.queryParams("Nombrenew");
+            String contra = req.queryParams("Pass");
+            String contra2 = req.queryParams("Pass2");
+            DAO cambiarDatos = new DAO();
+            cambiarDatos.ModificarCompleto(nombre, nombreValidacion, contra, contra2);
+            System.out.println(nombre +" " + nombreValidacion + " " + contra + " "+ contra2);
+            return "se ha modificado con exito";
+        }); 
+        get("/BuscarUsuario", (req, res)->{
+            before((req2, res2) -> res.type("application/txt"));
+            String Name = req.queryParams("Nombre"); 
+            DAO dao = new DAO();
+            boolean resultado = dao.BuscarUsuario(Name);
+            if(resultado){
+                return resultado;
+            }else{
+                return resultado;
+            }
+        });
+
     }
 }

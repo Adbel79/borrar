@@ -89,4 +89,63 @@ public class DAO {
         }
         return resultado;
     }
+
+    public void BorrarUsuarios(String ID){
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        Connection conn = null;
+        conn = conexion.getConnection();
+
+        try{
+            String sql = "DELETE FROM usuario WHERE email=?";
+            stm = conn.prepareStatement(sql);
+            stm.setString(1, ID);
+            stm.executeUpdate();
+            stm.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    public void ModificarCompleto(String NombreOld, String NombreNew, String Pass, String Pass2){
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        Connection conn = null;
+        conn = conexion.getConnection();
+
+        try{
+            String sql = "UPDATE usuario SET email = ?, password = ? WHERE email=?";
+            stm = conn.prepareStatement(sql);
+            stm.setString(1, NombreNew);
+            stm.setString(2, Pass);
+            stm.setString(3, NombreOld);
+            stm.executeUpdate();
+            stm.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public boolean BuscarUsuario(String Name){
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        Connection conn = null;
+        conn = conexion.getConnection();
+        try{
+            String sql = "SELECT * FROM usuario WHERE email = ?";
+            stm = conn.prepareStatement(sql);
+            stm.setString(1, Name);
+            rs = stm.executeQuery();
+            //rs = stm.executeQuery(sql);
+
+            while (rs.next()){
+                Usuario u = new Usuario(rs.getString("id"), rs.getString("email"), rs.getString("password"));
+                System.out.println(u.getEmail());
+                return true;
+            }
+            return false;
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

@@ -19,6 +19,21 @@
     <span>
         <ul id="usuarios"></ul>
     </span>
+    <!--se obtiene para buscar y borrar el usuario -->
+    <form id="eliminar"action="">
+        <input type="text" name="txtID" id="txtID" placeholder="Email" >
+        <button type="button" id="prueba"  >Borrar</button>
+        <br>
+        <br>
+    </form>
+
+    <form id="Modificar" action="">
+        <input type="text" name="txtNombre" id="txtNombre" placeholder="Nombre">
+        <input type="text" name="txtNombrenew" id="txtNombrenew" placeholder="Nombre Nuevo">
+        <input type="password" name="txtPass" id="txtPass" placeholder="ingresa contraseña nueva ">
+        <input type="password" name="txtPass2" id="txtPass2" placeholder="repite la contraseña" >
+        <button type="button" id="modificar" >Modificar Usuario</button>
+    </form>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
 </body>
